@@ -134,6 +134,6 @@ This enables real-time monitoring of dustbin capacity, gas levels, and automated
 
 ### Developed By
 
-Akshay Thakur
+Akshay Kumar
 
 **EcoShield – Smart Waste Management System**
