@@ -1,0 +1,129 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.popup-content {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 480px;
+  width: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.popup-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1f2937;
+}
+
+.popup-close {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: #f3f4f6;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  transition: background 0.2s, color 0.2s;
+}
+
+.popup-close:hover {
+  background: #ef4444;
+  color: #fff;
+}
+
+.popup-body {
+  padding: 24px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.no-history {
+  color: #6b7280;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+.sms-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sms-item {
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border-left: 4px solid #6b7280;
+}
+
+.sms-item.gas {
+  background: #fef2f2;
+  border-left-color: #ef4444;
+}
+
+.sms-item.dustbin {
+  background: #eff6ff;
+  border-left-color: #3b82f6;
+}
+
+.sms-type {
+  display: block;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.sms-message {
+  display: block;
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.sms-time {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}

@@ -1,0 +1,85 @@
+.clock-container {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.clock-container h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+.clock-face {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #1f2937;
+  position: relative;
+  margin: 0 auto;
+}
+
+.clock-marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #374151;
+  width: 20px;
+  margin-left: -10px;
+  margin-top: -8px;
+  text-align: center;
+  transform-origin: center center;
+}
+
+.clock-hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  background: #1f2937;
+}
+
+.clock-hand.hours {
+  width: 3px;
+  height: 28px;
+  margin-left: -1.5px;
+  border-radius: 2px;
+}
+
+.clock-hand.minutes {
+  width: 2px;
+  height: 38px;
+  margin-left: -1px;
+  border-radius: 2px;
+}
+
+.clock-hand.seconds {
+  width: 1px;
+  height: 42px;
+  margin-left: -0.5px;
+  background: #ef4444;
+}
+
+.clock-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: #1f2937;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock-digital {
+  margin: 12px 0 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  color: #374151;
+}
