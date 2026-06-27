@@ -15,34 +15,125 @@ Web dashboard for Smart Waste Management Dustbin project. Displays live gas sens
 | Jumper Wires | 30 |
 | USB Cable | 1 |
 
-## Run Web Page
+# Smart Dustbin Monitoring System
+
+## Run the Project
 
 ```bash
 npm install
 npm run dev
-npm run server   # SMS ke liye alag terminal me
+npm run server
 ```
 
-Open http://localhost:5173/
+Open the application in your browser:
 
-## SMS Number & Messages
+```
+http://localhost:5173/
+```
 
-- **Phone:** 9805493783 (`src/config.js`)
-- **Harmful Gas Message:** "ALERT: Dustbin me harmful gas ban rahi hai! Dustbin X% full, Gas Y%. Kripa karke turant khali karo."
-- **Dustbin Full Message:** "ALERT: Aapka dustbin X% bhar gaya hai. Kripa karke turant khali karo."
+## SMS Alerts
 
-Real SMS ke liye Twilio ya MSG91 API keys set karo (`.env`):
-- Twilio: `TWILIO_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_PHONE`
-- MSG91: `MSG91_AUTH_KEY`, `MSG91_TEMPLATE_ID`
+### Contact Number
+
+**Phone Number:** 9805493783
+(Configured in `src/config.js`)
+
+### Alert Messages
+
+#### Harmful Gas Detection Alert
+
+```
+ALERT: Harmful gas has been detected inside the dustbin. Dustbin is X% full and Gas Level is Y%. Please empty the dustbin immediately.
+```
+
+#### Dustbin Full Alert
+
+```
+ALERT: Your dustbin has reached X% capacity. Please empty it immediately.
+```
+
+## SMS API Configuration
+
+For real-time SMS notifications, configure either Twilio or MSG91 credentials in the `.env` file.
+
+### Twilio Configuration
+
+```env
+TWILIO_SID=
+TWILIO_AUTH_TOKEN=
+TWILIO_PHONE=
+```
+
+### MSG91 Configuration
+
+```env
+MSG91_AUTH_KEY=
+MSG91_TEMPLATE_ID=
+```
 
 ## Features
 
-- **Gas Sensor Gauge** – Normal, Mid, Dangerous level with live needle
-- **Dustbin Fill Gauge** – 20%, 40%, 60%, 80%, 100% with live needle
-- **Clock** – Real-time clock in center
-- **SMS History** – Popup with message history (click top-right button, close with ✕)
-- Simulated live data for demo – replace with Arduino/Serial data for real hardware
+### Gas Monitoring System
 
-## Arduino Connection (Future)
+* Real-time gas level monitoring
+* Live gauge with moving needle
+* Status indicators: Normal, Moderate, and Dangerous
 
-USB cable se Arduino laptop se connect karke live data bhej sakte ho. Arduino code se Serial port par JSON bhejna hoga, phir Web Serial API ya backend se web page ko data mil sakta hai.
+### Dustbin Fill-Level Monitoring
+
+* Live fill percentage tracking
+* Visual gauge with real-time updates
+* Capacity indicators: 20%, 40%, 60%, 80%, and 100%
+
+### Real-Time Clock
+
+* Displays current date and time
+* Automatically updates every second
+
+### SMS History
+
+* Stores and displays alert history
+* Accessible through the top-right button
+* Easy popup interface with close option
+
+### Live Data Simulation
+
+* Built-in sensor simulation for demonstrations
+* Can be replaced with actual hardware data for deployment
+
+## Future Hardware Integration
+
+The system can be connected to an Arduino using a USB connection for real-time sensor monitoring.
+
+### Supported Hardware
+
+* Arduino Uno
+* Ultrasonic Sensor (HC-SR04)
+* MQ135 Gas Sensor
+* Servo Motor
+
+### Data Communication
+
+Arduino can transmit sensor readings through the Serial Port in JSON format. The web application can then receive and display live data using:
+
+* Web Serial API
+* Node.js Backend Integration
+* Serial Communication Middleware
+
+This enables real-time monitoring of dustbin capacity, gas levels, and automated alert generation.
+
+## Project Highlights
+
+* Smart Waste Management Solution
+* Real-Time Monitoring Dashboard
+* Automated SMS Notifications
+* Gas Leakage Detection
+* Dustbin Fill-Level Tracking
+* Responsive Web Interface
+* Future IoT and Arduino Integration Support
+
+### Developed By
+
+Akshay Kumar
+
+**EcoShield – Smart Waste Management System**
