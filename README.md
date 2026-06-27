@@ -14,3 +14,4 @@ Web dashboard for Smart Waste Management Dustbin project. Displays live gas sens
 | Large Breadboard | 1 |
 | Jumper Wires | 30 |
 | USB Cable | 1 |
+
